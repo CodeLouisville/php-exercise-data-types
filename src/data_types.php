@@ -16,10 +16,6 @@ function convert_to_bool($value) {
 }
 
 function convert_to_string($value) {
-    if (is_array($value)) {
-        return implode(', ', $value);
-    }
-
     return (string)$value;
 }
 
