@@ -58,12 +58,22 @@ function convert_to_array($input) {
     }
 }
 
-function convert_to_null($input) {
-    $conversion = (unset) $input;
+//function convert_to_null($input) {
+//    $conversion = (unset) $input;
+//
+//    if (is_null($conversion)) {
+//        return $conversion;
+//    } else {
+//        return null;
+//    }
+//}
 
-    if (is_null($conversion)) {
-        return $conversion;
-    } else {
+//null #2
+function convert_to_null($input) {
+    if (is_null($input) || $input == 'null') {
         return null;
     }
+    
+    $conversion = (unset) $input;
+    return null;
 }
