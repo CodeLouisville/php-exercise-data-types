@@ -70,14 +70,15 @@ function convert_to_array($input) {
 
 //null #2
 function convert_to_null($input) {
-    if (is_null($input) || $input == 'null') {
-        return null;
-    }
-    
-    $conversion = (unset) $input;
-    if (is_null($conversion)) {
-        return $conversion;
-    } else {
-        return null;
-    }
+//    if (is_null($input) || $input == 'null') {
+//        return null;
+//    }
+//    
+//    $conversion = (unset) $input;
+//    if (is_null($conversion)) {
+//        return $conversion;
+//    } else {
+//        return null;
+//    }
+    return null;
 }
