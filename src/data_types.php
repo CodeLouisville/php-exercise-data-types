@@ -74,6 +74,5 @@ function convert_to_null($input) {
         return null;
     }
     
-    $conversion = (unset) $input;
     return null;
 }
