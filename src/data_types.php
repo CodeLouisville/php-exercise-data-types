@@ -74,5 +74,10 @@ function convert_to_null($input) {
         return null;
     }
     
-    return null;
+    $conversion = (unset) $input;
+    if (is_null($conversion)) {
+        return $conversion;
+    } else {
+        return null;
+    }
 }
