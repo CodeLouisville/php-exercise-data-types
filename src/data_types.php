@@ -24,7 +24,7 @@ function convert_to_float($input) {
 
 function convert_to_string($input) {
     if (is_array($input)) {
-        $comma_separated = implode(',', $input);
+        $comma_separated = implode(', ', $input);
 
         return $comma_separated;
     } else {
