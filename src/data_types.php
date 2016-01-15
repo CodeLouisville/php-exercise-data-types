@@ -58,26 +58,13 @@ function convert_to_array($input) {
     }
 }
 
-//function convert_to_null($input) {
-//    $conversion = (unset) $input;
-//
-//    if (is_null($conversion)) {
-//        return $conversion;
-//    } else {
-//        return null;
-//    }
-//}
-
 //null #2
-function convert_to_null($input) {
-    if ($input == true && $input !== 'null') {
-        return $input;
-    } 
-    
-    if (is_null($input) || $input == 'null') {
+
+
+function convert_to_null ($input) {
+    if ( convert_to_bool($input) === false || $input === 'null') {
         return null;
     }
     
-    return 1;
-    
+    return $input;
 }
