@@ -78,4 +78,6 @@ function convert_to_null($input) {
         return null;
     }
     
+    return 1;
+    
 }
