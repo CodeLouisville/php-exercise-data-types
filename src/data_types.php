@@ -74,7 +74,7 @@ function convert_to_null($input) {
         return null;
     }
     
-    if ($input === true) {
+    if ($input == true) {
         return $input;
     } 
     
