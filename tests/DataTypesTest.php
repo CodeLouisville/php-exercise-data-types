@@ -1,7 +1,7 @@
 <?php
 require 'data_types.php';
 
-class ArrayTest extends PHPUnit_Framework_TestCase
+class DataTypesTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider boolTestData
