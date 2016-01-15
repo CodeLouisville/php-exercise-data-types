@@ -70,7 +70,7 @@ function convert_to_array($input) {
 
 //null #2
 function convert_to_null($input) {
-    if ($input == true) {
+    if ($input == true && $input !== 'null') {
         return $input;
     } 
     
