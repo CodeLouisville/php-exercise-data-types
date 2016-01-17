@@ -21,7 +21,7 @@ function convert_to_string($test){
     $string = strval($test);
     if ( is_string($string) == true ){
         return $string;
-    } else return " ' ' ";
+    } else return ' ';
 }
 
 
@@ -37,7 +37,7 @@ function convert_to_array($test){
     $array = str_split(strval($test));
     if ( is_array($array) == true ){
         return $array;
-    } else return "[]";
+    } else return [];
 }
     
 
