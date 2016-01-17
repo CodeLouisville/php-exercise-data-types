@@ -13,7 +13,7 @@ function convert_to_float($test){
     $float = floatval($test);
     if ( is_float($float) == true ){
         return $float;
-    } else return "0.0";
+    } else return 0.0;
 }
 
 
@@ -28,8 +28,8 @@ function convert_to_string($test){
 function convert_to_bool($test){
     $bool = boolval($test);
     if ( $bool === true ){
-        return "true";
-    } else return "false";
+        return true;
+    } else return false;
 }
 
 
@@ -45,7 +45,7 @@ function convert_to_null($test){
     $test = NULL;
     if ( is_null($test) == true ){
         return $test;
-    } else return "null";
+    } else return null;
 }
 
 
