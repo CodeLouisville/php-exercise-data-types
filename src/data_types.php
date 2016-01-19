@@ -10,6 +10,16 @@ echo convert_to_int();
 
 //convert_to_float:
 
+function convert_to_float($input = 0.0)
+{
+  if($input === 0.0) 
+{
+
+return convert_to_float();
+} 
+}
+
+
 
 convert_to_float()
 convert_to_string()
