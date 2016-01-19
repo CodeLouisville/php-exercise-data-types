@@ -29,8 +29,11 @@ function convert_to_string($input = 0)
 echo convert_to_string();
 
 
-convert_to_bool()
-convert_to_array()
-convert_to_null()
+//convert_to_bool()
+
+
+//convert_to_array()
+
+//convert_to_null()
 
 ?>
