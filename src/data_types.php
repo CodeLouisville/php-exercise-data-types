@@ -26,7 +26,10 @@
       if ($input === []) {
         return [];
       }
-      return [strval($input)];
+      if (is_array($input)) {
+        return $input;
+      }
+      return [$input];
     }
     
     function convert_to_null($input) {
