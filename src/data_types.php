@@ -9,7 +9,7 @@
     
     function convert_to_string($input) {
       if (is_array($input)) {
-        return implode(",", $input);
+        return implode(", ", $input);
       } else {
         return strval($input);
       }
@@ -23,21 +23,24 @@
       if (is_null($input)) {
         return [];
       }
-      if ($input == []) {
+      if ($input === []) {
         return [];
       }
-      return ['$input'];
+      return [strval($input)];
     }
     
     function convert_to_null($input) {
-      if (is_null($input)) {
-        return null;
+      if ($input == true ) {
+        return true;
       }
       if ($input == 'null') {
         return null;
       }
       if ($input == false) {
         return null;
+      }
+      if (is_null($input)) {
+        return null;  
       }
       return $input;
     }
