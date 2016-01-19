@@ -20,9 +20,15 @@ return convert_to_float();
 }
 
 
+//convert_to_string:
+function convert_to_string($input = 0)
+{
+ return "$input";
+}
 
-convert_to_float()
-convert_to_string()
+echo convert_to_string();
+
+
 convert_to_bool()
 convert_to_array()
 convert_to_null()
