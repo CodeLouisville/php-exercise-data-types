@@ -47,7 +47,7 @@ function convert_to_bool($input)
 
 function convert_to_null($input)
 {
-    if ($input == null || $input == 'null') {
+    if ($input === null || $input === 'null' || $input === 0 || $input === false || $input === 0.0 || $input === '') {
         return null;
     } else {
         return $input;
@@ -63,7 +63,7 @@ function convert_to_array($input)
         if (is_array($modInput)) {
             return $modInput;
         } else {
-            return [];
+            return array();
         }
     }
 }
