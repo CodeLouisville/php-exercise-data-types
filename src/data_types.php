@@ -33,11 +33,16 @@
     }
     
     function convert_to_null($input) {
-        if ( ($input==0) or ($input==0.0) or ($input=='') or ($input==[]) or ($input==false) or ($input=='null')) {
-            return null;
-        } else {
-            return $input;
+      
+        if ($input === true) {
+              return $input;
         }
+          
+        if ( ($input==0) or ($input==0.0) or ($input=='') or ($input==[]) or ($input==false) or ($input=='null') or is_null($input)) {
+          return null;
+        }
+        
+        return $input;
     }
     
 ?>
