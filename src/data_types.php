@@ -12,7 +12,7 @@ echo convert_to_int();
 
 function convert_to_float($input=0)
 {
-return ($input + 0.5);
+return ($input + 0.0);
 }
 
 convert_to_float();
