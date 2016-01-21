@@ -30,6 +30,13 @@ echo convert_to_string();
 
 
 //convert_to_bool()
+function convert_to_bool($input = false) {
+  if (is_bool($input) === true) {
+    echo "This is a boolean!";
+  }
+}
+
+return convert_to_bool();
 
 
 //convert_to_array()
