@@ -62,7 +62,6 @@ function convert_to_array($input)
  +        return [];
  +      } else {
             return array($input);
-        }
-    }
+        }    
 }
  ?>
