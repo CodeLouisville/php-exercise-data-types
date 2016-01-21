@@ -58,7 +58,9 @@ function convert_to_array($input)
 {
     if (is_array($input)) {
         return $input;
-    } else {
+    } elseif (is_null($input)) {
+ +        return [];
+ +      } else {
             return array($input);
         }
     }
