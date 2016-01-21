@@ -59,10 +59,11 @@ function convert_to_array($input)
     if (is_array($input)) {
         return $input;
     }
-    if (is_null($input)) {
- +        return array();
- +  } else {
-        return array($input);
+    if ($input === null) {
+        $blank = array();
+        return $blank;
     }
+    $modInput = array($input);
+    return $modInput;
 }
  ?>
