@@ -25,7 +25,7 @@ function convert_to_array($input){
 
 function convert_to_null($input){
     //ensure the string 'null' is converted to null
-    if ($input=='null') $input=null;
+    if ($input==='null') $input=null;
     return convert_to_bool($input)?$input:null;
 }
 
