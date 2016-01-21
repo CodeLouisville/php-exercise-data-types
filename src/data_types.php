@@ -10,14 +10,12 @@ echo convert_to_int();
 
 //convert_to_float:
 
-function convert_to_float($input = 0.0)
+function convert_to_float($input=0)
 {
-  if($input === 0.0) 
-{
-
-return convert_to_float();
-} 
+ echo ($input + 0.5)."\n";
 }
+
+convert_to_float();
 
 
 //convert_to_string:
@@ -48,5 +46,7 @@ function convert_to_array($input=array("cheese","bread","chocolate")) {
 return convert_to_array();
 
 //convert_to_null()
+
+
 
 ?>
