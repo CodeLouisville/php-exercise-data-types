@@ -41,6 +41,12 @@ return convert_to_bool();
 
 //convert_to_array()
 
+function convert_to_array($input=array("cheese","bread","chocolate")) {
+  echo "I miss " . $input[0] . ", " . $input[1] . " and " . $input[2] . "!";
+}
+
+return convert_to_array();
+
 //convert_to_null()
 
 ?>
