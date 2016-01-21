@@ -10,9 +10,9 @@ echo convert_to_int();
 
 //convert_to_float:
 
-function convert_to_float($input=0)
+function convert_to_float($input=0 + 0.0)
 {
-return ($input + 0.0);
+return ($input);
 }
 
 convert_to_float();
