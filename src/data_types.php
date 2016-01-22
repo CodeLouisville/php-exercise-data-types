@@ -10,12 +10,15 @@ echo convert_to_int();
 
 //convert_to_float:
 
-function convert_to_float($input=0 + 0.0)
+$var = '8493.384Oops';
+$input = floatval($var);
+
+function convert_to_float($input)
 {
-return ($input);
+  echo $input;
 }
 
-convert_to_float();
+convert_to_float($input);
 
 
 //convert_to_string:
