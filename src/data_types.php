@@ -15,7 +15,7 @@ $input = floatval($var);
 
 function convert_to_float($input)
 {
-  echo $input;
+  return $input;
 }
 
 convert_to_float($input);
