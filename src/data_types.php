@@ -1,63 +1,60 @@
 <?php
 //covert_to_int:
-function convert_to_int($input = "0")
-{
-  return $input;
-}
+//function convert_to_int($input = "0")
+//{
+  //return $input;
+//}
 
-echo convert_to_int();
+//return convert_to_int();
 
 
 //convert_to_float:
 
-$var = '8493.384Oops';
-$input = floatval($var);
+//$var = '8493.384Oops';
+//$input = floatval($var);
 
-function convert_to_float($input)
-{
-  return $input;
-}
+//function convert_to_float($input)
+//{
+  //return $input;
+//}
 
-convert_to_float($input);
+//convert_to_float($input);
 
 
 //convert_to_string:
-function convert_to_string($input = 0)
-{
- return "$input";
-}
+//function convert_to_string($input = 0)
+//{
+ //return "$input";
+//}
 
-echo convert_to_string();
+//echo convert_to_string();
 
 
 //convert_to_bool()
-function convert_to_bool($input = false) {
-  if (is_bool($input) === true) {
-    echo "This is a boolean!";
-  }
-}
+//function convert_to_bool($input = false) {
+  //if (is_bool($input) === true) {
+    //echo "This is a boolean!";
+  //}
+//}
 
-return convert_to_bool();
+//return convert_to_bool();
 
 
 //convert_to_array()
 
-function convert_to_array($input=array("cheese","bread","chocolate")) {
-  echo "I miss " . $input[0] . ", " . $input[1] . " and " . $input[2] . "!";
-}
+//function convert_to_array($input=array("cheese","bread","chocolate")) {
+  //echo "I miss " . $input[0] . ", " . $input[1] . " and " . $input[2] . "!";
+//}
 
-return convert_to_array();
+//return convert_to_array();
 
 //convert_to_null()
 
-function convert_to_null($input = array()){
-  $input == NULL;
-}
+//function convert_to_null($input = array()){
+  //$input == NULL;
+//}
 
-return convert_to_null();
-
-
-
+//return convert_to_null();
 
 
 ?>
