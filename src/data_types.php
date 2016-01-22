@@ -50,12 +50,8 @@ return convert_to_array();
 
 //convert_to_null()
 
-function convert_to_null($input = array()){ 
-  if($input == NULL){
-  echo "This is null.";
-} else {
-  echo "Oops. This is not null.";
-}
+function convert_to_null($input = array()){
+  $input == NULL
 }
 
 return convert_to_null();
