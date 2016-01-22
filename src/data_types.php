@@ -5,7 +5,11 @@
   //return $input;
 //}
 
+
 //return convert_to_int();
+
+//convert_to_int();
+
 
 
 //convert_to_float:
@@ -53,6 +57,11 @@
 //function convert_to_null($input = array()){
   //$input == NULL;
 //}
+
+
+
+//return convert_to_null();
+
 
 //return convert_to_null();
 
