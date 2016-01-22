@@ -51,7 +51,7 @@ return convert_to_array();
 //convert_to_null()
 
 function convert_to_null($input = array()){
-  $input == NULL
+  $input == NULL;
 }
 
 return convert_to_null();
