@@ -22,7 +22,7 @@ If a value can not be converted you should return the following *falsy* value fo
 
 There are a few special cases:
 
-1. If an `array` is passed as *input* to `convert_to_string()`, it should a string representation of the elements, in order, as a comma separated list. For example, an input of `[1, 2, 3]` should return `1, 2, 3`, an input of `[1]` should return `1`.
+1. If an `array` is passed as *input* to `convert_to_string()`, it should be a string representation of the elements, in order, as a comma separated list. For example, an input of `[1, 2, 3]` should return `1, 2, 3`, an input of `[1]` should return `1`.
 2. If any of the *falsy* values above or the string `null` is passed as *input* to `convert_to_null()`, it should return `null`. Otherwise, it should return the original *input*.
 
 ## Just getting started?
