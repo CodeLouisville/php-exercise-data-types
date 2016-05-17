@@ -24,12 +24,12 @@ function convert_to_bool($input){
 
 
 function convert_to_array($input){
-  return array_fill($input);
+  return array($input);
 }
 
 
 function convert_to_null($input){
-  if (!$input) {
+  if (null) {
     return null;
   }
   return $input;
