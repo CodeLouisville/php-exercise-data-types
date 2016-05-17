@@ -21,11 +21,14 @@ function convert_to_bool($input) {
 }
 
 function convert_to_array($input) {
-	array([$input]);
-	return $input;	
+	implode([$input]);
+	$input = array([$input]);
+	return $input;
 }
 
 function convert_to_null($input) {
 	$input = null;
 	return $input;
 }
+
+?>
