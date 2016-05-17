@@ -23,11 +23,9 @@ function convert_to_bool($input){
 }
 
 
-
 function convert_to_array($input){
-  return array($input);
+  return array_fill($input);
 }
-
 
 
 function convert_to_null($input){
