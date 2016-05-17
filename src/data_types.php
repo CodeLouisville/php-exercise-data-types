@@ -18,16 +18,16 @@ function convert_to_float($value) {
 function convert_to_string($value) {
 	if(is_array($value))
 	{
-		$value = implode(',',$value);
+		$value = implode(', ',$value);
 	}
 	 return strval($value);
 }
 function convert_to_bool($value) {
 	return boolval($value);
 }
-function convert_to_array($array) {
-	$result = explode(',',$array);
+function convert_to_array($value) {
 	
+	$result = array($value)
 	if(is_array($result))
 	{
 		return $result;
