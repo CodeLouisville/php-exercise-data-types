@@ -1,20 +1,26 @@
 <?php
 
-$var = "Hello there, everybody!";
 
-convert_to_int($var);
+function convert_to_int($input){
+  return intval($input);
+}
 
+function convert_to_float($input){
+  return floatval($input);
+}
 
-convert_to_float($var);
+function convert_to_string($input){
+  return strval($input);
+}
 
+function convert_to_bool($input){
+  return boolval($input);
+}
 
-convert_to_string($var);
+function convert_to_array($input){
+  return array_values($input);
+}
 
-
-convert_to_bool($var);
-
-
-convert_to_array($var);
-
-
-convert_to_null($var);
+function convert_to_null($input){
+  return $input;
+}
