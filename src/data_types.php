@@ -29,7 +29,7 @@ function convert_to_array($input){
 
 
 function convert_to_null($input){
-  if (null) {
+  if (!$input){
     return null;
   }
   return $input;
