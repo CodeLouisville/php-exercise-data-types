@@ -27,7 +27,7 @@ function convert_to_bool($value) {
 }
 function convert_to_array($value) {
 	
-	$result = array($value)
+	$result = array($value);
 	if(is_array($result))
 	{
 		return $result;
