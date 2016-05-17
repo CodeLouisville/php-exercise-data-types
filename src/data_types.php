@@ -1,3 +1,5 @@
+<?php
+
 $var = "Hello there, everybody!";
 
 convert_to_int($var);
