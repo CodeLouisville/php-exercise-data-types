@@ -29,5 +29,8 @@ function convert_to_array($input){
 
 
 function convert_to_null($input){
-  return is_null($input);
+  if (!$input) {
+    return null;
+  }
+  return $input;
 }
