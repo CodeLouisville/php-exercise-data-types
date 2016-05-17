@@ -143,7 +143,8 @@ class DataTypesTest extends PHPUnit_Framework_TestCase
             [1, 1],
             [true, true],
             [[2, 3], [2, 3]],
-            [0.3, 0.3]
+            [0.3, 0.3],
+            ['value', 'value']
         ];
     }
 }
