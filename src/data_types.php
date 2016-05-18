@@ -27,17 +27,21 @@ function convert_to_float($float){
     return number_format($convert, 1);
   }
 }
-echo convert_to_float(4.565);
+echo convert_to_float("poop");
 
 
 //convert_to_string
 function convert_to_string($string){
-  if(){
-
+  if(is_integer($string) || is_string($string)){
+    return strval($string);
+  } elseif (is_array($string)) {
+    return implode(",", $string);
+  } else {
+    return '';
   }
 }
 
-//echo convert_to_string("3452")
+echo convert_to_string(null);
 
 
 //convert_to_bool
