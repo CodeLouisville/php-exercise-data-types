@@ -6,28 +6,28 @@ function convert_to_int($int){
 echo convert_to_int('4.567');
 
 
-/*convert_to_float
-function convert_to_float($float){
+//convert_to_float
+/*function convert_to_float($float){
   $convert = floatval($float);
-  if($convert != 0) {
+  if($convert != null) {
     return $convert;
   } else {
     //return 0.0;
     return number_format($convert, 1);
   }
 }
-echo convert_to_float(4.565);*/
+echo convert_to_float("dog");*/
 
 //convert_to_float
 function convert_to_float($float){
   $convert = floatval($float);
-  if(is_float($convert) == true) {
+  if($convert == true) {
     return $convert;
   } else {
-    return number_format($convert, 1);
+    return 0.0;
   }
 }
-echo convert_to_float("poop");
+echo convert_to_float("25.656  ");
 
 
 //convert_to_string
@@ -40,8 +40,7 @@ function convert_to_string($string){
     return '';
   }
 }
-
-echo convert_to_string(null);
+echo convert_to_string('poop');
 
 
 //convert_to_bool
