@@ -23,6 +23,3 @@ function convert_to_array($input) {
 function convert_to_null($input) {
 	return null;
 }
-
-$trial = convert_to_null(1);
-var_dump($trial);
