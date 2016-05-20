@@ -1,13 +1,8 @@
 <?php 
 
 function convert_to_int($input) {
-	settype($input, "int");
-	if(is_int($input)) {
-		return $input;
-	} else {
-		return 0;
-	}}
-	
+	return (int)$input;
+}
 
 function convert_to_float($input) {
 	settype($input, "float");
@@ -19,13 +14,13 @@ function convert_to_float($input) {
 }
 
 function convert_to_string($input) {
-	if(is_string($input)) {
-		return $input;
+	if(is_array($input)) {
+		return implode(", ", $input);
 	} else {
-		return "";
+	return (string)$input;
 	}
 }
-
+	
 function convert_to_bool($input) {
 	settype($input, "bool");
 	if(is_bool($input)) {
@@ -45,10 +40,9 @@ function convert_to_array($input) {
 }
 
 function convert_to_null($input) {
-	settype($input, "null");
-	if(is_null($input)) {
-		return $input;
-	} else {
+	if(!$input || $input === "null") {
 		return null;
+	} else {
+		return $input;
 	}
 }
