@@ -1,0 +1,38 @@
+<?php
+
+$a = "99";
+$b = 99;
+$c = 1.99;
+$d = "1909";
+$e = 1;
+
+//Convert string to Int
+(int)$a;
+var_dump($a + 0); //int(99)
+
+//convert int to_float()
+(float)$b;
+var_dump($b + .7); // float(99.7)
+
+//convert int_to_string()  using Inline variable parsing
+echo "I'd like {$b} waffles\n"; // I'd like 99 waffles
+
+//or explicit
+echo (string)$b; // 99
+
+//convert int_to_bool()
+var_dump((bool)$e); // bool(true)
+echo ((bool)$c) ? 'true' : 'false'; // true
+
+
+//convert int_to_array()
+$array  = array_map('intval', str_split($d));
+var_dump($array);
+
+//convert_to_null()
+$newA =  is_null($a);
+var_dump($newA);
+
+?>
+
+
