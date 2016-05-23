@@ -18,6 +18,7 @@ echo convert_to_int('dog');
 }
 echo convert_to_float("dog");*/
 
+
 //convert_to_float
 function convert_to_float($float){
   $convert = floatval($float);
@@ -53,19 +54,6 @@ function convert_to_bool($bool){
 }
 echo convert_to_bool(45);
 
-//convert_to_array
-// function convert_to_array($arr){
-//   if($arr){
-//     $convert_arr = array($arr);
-//     print_r($convert_arr);
-//     var_dump($convert_arr)
-//   } elseif(is_array($arr)){
-//     print_r(array_values($arr));
-//   } else {
-//     return "[ ]";
-//   }
-// }
-// echo convert_to_array([1,3,4,2,1]);
 
 //convert_to_array
 function convert_to_array($arr){
@@ -82,12 +70,14 @@ function convert_to_array($arr){
 
 echo convert_to_array(45);
 
+
 //convert_to_null
-// function convert_to_null(){
-//
-// }
-//
-// echo convert_to_null();
+function convert_to_null($null){
+  if (is_null($null) || $null != true) {
+    return "null";
+  } else {
+    return $null;
+  }
+}
 
-
- ?>
+echo convert_to_null(false);
