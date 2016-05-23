@@ -67,14 +67,27 @@ echo convert_to_bool(45);
 // }
 // echo convert_to_array([1,3,4,2,1]);
 
-//convert_to_null
-function convert_to_null(){
-
+//convert_to_array
+function convert_to_array($arr){
+  if(is_array($arr)) {
+    print_r($arr);
+  }
+    elseif (is_int($arr) OR is_string($arr)) {
+    $convert_arr = array($arr);
+    print_r($convert_arr);
+  } else {
+    return "[]";
+    }
 }
 
-echo convert_to_null();
+echo convert_to_array(45);
 
-
+//convert_to_null
+// function convert_to_null(){
+//
+// }
+//
+// echo convert_to_null();
 
 
  ?>
