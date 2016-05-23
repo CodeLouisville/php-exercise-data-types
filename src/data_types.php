@@ -65,7 +65,7 @@ function convert_to_array($arr){
     $convert_arr = array($arr);
     print_r($convert_arr);
   } else {
-    $empty = []
+    $empty = [];
     return $empty;
     }
 }
