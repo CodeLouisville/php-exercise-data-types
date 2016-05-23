@@ -25,7 +25,7 @@ function convert_to_float($float){
   if($convert) {
     return $convert;
   } else {
-    return number_format($convert, 1);
+    return 0.0;
   }
 }
 echo convert_to_float("pop");
@@ -38,7 +38,8 @@ function convert_to_string($string){
   } elseif (is_array($string)) {
     return implode(", ", $string);
   } else {
-    return '';
+    $empty = '';
+    return $empty;
   }
 }
 echo convert_to_string(['cat', 3, 'dog', 33, 'pop']);
@@ -47,9 +48,9 @@ echo convert_to_string(['cat', 3, 'dog', 33, 'pop']);
 //convert_to_bool
 function convert_to_bool($bool){
   if(boolval($bool) == 1) {
-    return "true";
+    return true;
   } else {
-    return "false";
+    return false;
   }
 }
 echo convert_to_bool(45);
@@ -64,7 +65,8 @@ function convert_to_array($arr){
     $convert_arr = array($arr);
     print_r($convert_arr);
   } else {
-    return "[]";
+    $empty = []
+    return $empty;
     }
 }
 
@@ -74,7 +76,7 @@ echo convert_to_array(45);
 //convert_to_null
 function convert_to_null($null){
   if (is_null($null) || $null != true) {
-    return "null";
+    return null;
   } else {
     return $null;
   }
