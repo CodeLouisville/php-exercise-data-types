@@ -25,7 +25,7 @@ echo convert_to_float("pop");
 
 //convert_to_string
 function convert_to_string($string){
-  if(is_integer($string) || is_string($string)){
+  if(is_integer($string) || is_string($string) || is_float($string)){
     return strval($string);
   } elseif (is_array($string)) {
     return implode(", ", $string);
@@ -34,7 +34,7 @@ function convert_to_string($string){
     return $empty;
   }
 }
-echo convert_to_string([3,5,3]);
+echo convert_to_string(["skate",45,"trap"]);
 
 
 //convert_to_bool
@@ -51,27 +51,32 @@ echo convert_to_bool(45);
 //convert_to_array
 function convert_to_array($arr){
   if(is_array($arr)) {
-    print_r($arr);
+    $test = array_values($arr);
+    var_dump($test);
   }
-    elseif (is_int($arr) OR is_string($arr)) {
+    elseif (is_int($arr) == 0 || is_string($arr)) {
     $convert_arr = array($arr);
-    print_r($convert_arr);
+    $value = array_values($convert_arr);
+    var_dump($value);
   } else {
     $empty = [];
     return $empty;
     }
 }
 
-echo convert_to_array(40);
+echo convert_to_array(0);
 
 
 //convert_to_null
 function convert_to_null($null){
-  if (is_null($null) || $null != true) {
-    return null;
+  $value= is_null($null);
+  if ($value) {
+    return "nothing";
+  } elseif ($null == 0 || $null == "0" || $null == "null") {
+    return "Yay!";
   } else {
     return $null;
   }
-}
+ }
 
-echo convert_to_null(false);
+echo convert_to_null("null");
