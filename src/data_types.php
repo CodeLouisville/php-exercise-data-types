@@ -2,7 +2,6 @@
 //convert_to_int
 function convert_to_int($int){
   $value = intval($int);
-  var_dump($value);
   if ($value) {
     return $value;
   } else {
@@ -35,7 +34,7 @@ function convert_to_string($string){
     return $empty;
   }
 }
-echo convert_to_string(['cat', 3, 'dog', 33, 'pop']);
+echo convert_to_string([3,5,3]);
 
 
 //convert_to_bool
