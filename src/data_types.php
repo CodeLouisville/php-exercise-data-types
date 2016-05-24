@@ -71,9 +71,9 @@ echo convert_to_array(0);
 function convert_to_null($null){
   $value= is_null($null);
   if ($value) {
-    return "nothing";
+    return null;
   } elseif ($null == 0 || $null == "0" || $null == "null") {
-    return "Yay!";
+    return null;
   } else {
     return $null;
   }
