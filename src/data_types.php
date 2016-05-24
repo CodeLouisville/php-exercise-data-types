@@ -70,7 +70,7 @@ function convert_to_array($arr){
     }
 }
 
-echo convert_to_array(45);
+echo convert_to_array(40);
 
 
 //convert_to_null
