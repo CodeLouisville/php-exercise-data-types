@@ -1,22 +1,15 @@
 <?php
 //convert_to_int
 function convert_to_int($int){
-  return intval($int);
-}
-echo convert_to_int('dog');
-
-
-//convert_to_float
-/*function convert_to_float($float){
-  $convert = floatval($float);
-  if($convert != null) {
-    return $convert;
+  $value = intval($int);
+  var_dump($value);
+  if ($value) {
+    return $value;
   } else {
-    //return 0.0;
-    return number_format($convert, 1);
+    return 0;
   }
 }
-echo convert_to_float("dog");*/
+echo convert_to_int("Hold The DOOR!");
 
 
 //convert_to_float
