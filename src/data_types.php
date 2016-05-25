@@ -58,7 +58,7 @@ function convert_to_array($arr){
     $convert_arr = array($arr);
     array_values($convert_arr);
     } else {
-    $empty = [];
+    $empty = ["Poop"];
     return $empty;
     }
 }
@@ -69,11 +69,11 @@ echo convert_to_array(45);
 //convert_to_null
 function convert_to_null($null){
   $value= is_null($null);
-  
+
   if ($value) {
-    return "nothing";
+    return null;
   } elseif ($null == 0 || $null == "0" || $null == "null") {
-    return "yay";
+    return null;
   } else {
     return $null;
     var_dump($null);
