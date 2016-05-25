@@ -34,7 +34,7 @@
 
 	function convert_to_string($str){
 		if(is_array($str)){
-			return implode("," , $str);
+			return implode(", " , $str);
 		} else if(settype($str, 'string')) {
 			return $str;
 		} else {
@@ -42,8 +42,8 @@
 		}
 	}
 
-	$var = convert_to_string(55);
-	//$var = convert_to_string(array('foo', 'bar'));
+	//$var = convert_to_string(55);
+	$var = convert_to_string(array('foo', 'bar'));
 
 	//echo $var;
 	var_dump($var);
@@ -64,7 +64,7 @@
 //convert_to_array()
 
 	function convert_to_array($arrgh) {
-		if (is_string($arrgh) || is_bool($arrgh) || is_float($arrgh)) {
+		if (is_string($arrgh)) {//|| is_bool($arrgh) || is_float($arrgh)) {
 		return str_split($arrgh);
 	} elseif (is_int($arrgh)) {
 		return array_map('intval', str_split($arrgh));
