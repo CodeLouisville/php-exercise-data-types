@@ -48,7 +48,7 @@ function convert_to_bool($bool){
 echo convert_to_bool(45);
 
 
-//convert_to_array
+convert_to_array
 function convert_to_array($arr){
   if(is_array($arr)) {
     $test = array_values($arr);
@@ -70,13 +70,15 @@ echo convert_to_array(0);
 //convert_to_null
 function convert_to_null($null){
   $value= is_null($null);
+  var_dump($value);
   if ($value) {
-    return null;
+    return "nothing";
   } elseif ($null == 0 || $null == "0" || $null == "null") {
-    return null;
+    return "yay";
   } else {
     return $null;
+    var_dump($null);
   }
  }
 
-echo convert_to_null("null");
+echo convert_to_null(true);
