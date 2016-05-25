@@ -48,35 +48,35 @@ function convert_to_bool($bool){
 echo convert_to_bool(45);
 
 
-//convert_to_array
-function convert_to_array($arr){
-  if(is_array($arr)) {
-    $test = array_values($arr);
-    var_dump($test);
-  }
-    elseif (is_int($arr) || is_string($arr)) {
-    $convert_arr = array($arr);
-    array_values($convert_arr);
-    } else {
-    $empty = ["Poop"];
-    return $empty;
-    }
-}
-
-echo convert_to_array(45);
+// //convert_to_array
+// function convert_to_array($arr){
+//   if(is_array($arr)) {
+//     $test = array_values($arr);
+//     var_dump($test);
+//   }
+//     elseif (is_int($arr) || is_string($arr)) {
+//     $convert_arr = array($arr);
+//     return array_values($convert_arr);
+//     } else {
+//     $empty = ["empty"];
+//     return $empty;
+//     }
+// }
+//
+// echo convert_to_array("45");
 
 
 //convert_to_null
 function convert_to_null($null){
   $value= is_null($null);
-
+  // var_dump($value);
   if ($value) {
     return null;
-  } elseif ($null == 0 || $null == "0" || $null == "null") {
+  } elseif ($null == 0 || $null == "0" || $null == "null" || is_bool($null)) {
     return null;
   } else {
     return $null;
-    var_dump($null);
+    // var_dump($null);
   }
  }
 
