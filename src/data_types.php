@@ -64,16 +64,14 @@
 	function convert_to_array($arrgh) {
 		if (is_array($arrgh)) {
 			return($arrgh);
-		} elseif (is_string($arrgh) || is_bool($arrgh) || is_float($arrgh)) {
-			return array_map('strval', array($arrgh));
-		} elseif (is_int($arrgh)) {
-			return array_map('intval', str_split($arrgh));
+		} else if($arrgh = null) {
+			return array();
 		} else {
-			return [];
-			}
+			return array($arrgh);
+		} 
 	}
 	
-	$yayarray = convert_to_array(array(2, 3));
+	$yayarray = convert_to_array(null);
 	var_dump($yayarray);
 
 
