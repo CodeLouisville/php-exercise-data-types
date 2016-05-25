@@ -49,8 +49,6 @@
 	var_dump($var);
 
 
-
-
 //convert_to_bool
 
 	function convert_to_bool($boo) {
@@ -64,22 +62,24 @@
 //convert_to_array()
 
 	function convert_to_array($arrgh) {
-		if (is_string($arrgh)) {//|| is_bool($arrgh) || is_float($arrgh)) {
-		return str_split($arrgh);
-	} elseif (is_int($arrgh)) {
-		return array_map('intval', str_split($arrgh));
-	} elseif (str_split($arrgh)) {
-		return str_split($arrgh);
-	} else {
-		return [];
-		}
+		if (is_array($arrgh)) {
+			return($arrgh);
+		} elseif (is_string($arrgh) || is_bool($arrgh) || is_float($arrgh)) {
+			return array_map('strval', array($arrgh));
+		} elseif (is_int($arrgh)) {
+			return array_map('intval', str_split($arrgh));
+		} else {
+			return [];
+			}
 	}
 	
-	$yayarray = convert_to_array(null);
+	$yayarray = convert_to_array(array(2, 3));
 	var_dump($yayarray);
 
 
 //convert_to_null()
 
 	function convert_to_null() {}
+
+
 
