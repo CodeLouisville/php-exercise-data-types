@@ -70,12 +70,12 @@ echo convert_to_array("45");
 function convert_to_null($null){
   $value= is_null($null);
   // var_dump($value);
-  if ($value) {
-    return null;
-  } elseif ($null == 0 || $null == "0" || $null == "null" || is_bool($null)) {
+  if (!$value) {
+    return $null;
+  } elseif ($null==0||$null=="0"||$null=="null"||is_bool($null)||$null==[]||$null="") {
     return null;
   } else {
-    return $null;
+    return null;
     // var_dump($null);
   }
  }
