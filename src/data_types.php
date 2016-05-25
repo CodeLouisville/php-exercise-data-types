@@ -48,29 +48,28 @@ function convert_to_bool($bool){
 echo convert_to_bool(45);
 
 
-convert_to_array
+//convert_to_array
 function convert_to_array($arr){
   if(is_array($arr)) {
     $test = array_values($arr);
     var_dump($test);
   }
-    elseif (is_int($arr) == 0 || is_string($arr)) {
+    elseif (is_int($arr) || is_string($arr)) {
     $convert_arr = array($arr);
-    $value = array_values($convert_arr);
-    var_dump($value);
-  } else {
+    array_values($convert_arr);
+    } else {
     $empty = [];
     return $empty;
     }
 }
 
-echo convert_to_array(0);
+echo convert_to_array(45);
 
 
 //convert_to_null
 function convert_to_null($null){
   $value= is_null($null);
-  var_dump($value);
+  
   if ($value) {
     return "nothing";
   } elseif ($null == 0 || $null == "0" || $null == "null") {
