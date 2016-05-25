@@ -22,8 +22,8 @@ function convert_to_string($input){
 //$array_var =array(1,2,3);
 //var_dump(convert_to_string(66));
 
-function convert_to_boolean($input){
-	return (boolean)$input;
+function convert_to_bool($input){
+	return (bool)$input;
 }
 
 //var_dump(convert_to_boolean(7));
