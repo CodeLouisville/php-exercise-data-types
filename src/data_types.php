@@ -52,30 +52,30 @@ echo convert_to_bool(45);
 function convert_to_array($arr){
   if(is_array($arr)) {
     $test = array_values($arr);
-    var_dump($test);
+    print_r($test);
   }
     elseif (is_int($arr) || is_string($arr)) {
     $convert_arr = array($arr);
-    return array_values($convert_arr);
+    print_r(array_values($convert_arr));
     } else {
-    $empty = ["empty"];
-    return $empty;
+    $empty = [];
+    print_r($empty);
     }
 }
 
-echo convert_to_array("45");
+echo convert_to_array([1,1,"poop"]);
 
 
 //convert_to_null
 function convert_to_null($null){
   $value= is_null($null);
   // var_dump($value);
-  if (!$value) {
-    return $null;
-  } elseif ($null==0||$null=="0"||$null=="null"||is_bool($null)||$null==[]||$null="") {
+  if ($value) {
+    return null;
+  } elseif ($null == 0 || $null == "0" || $null == "null" || is_bool($null) || $null == "" || $null == []) {
     return null;
   } else {
-    return null;
+    return $null;
     // var_dump($null);
   }
  }
