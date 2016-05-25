@@ -14,13 +14,13 @@ function convert_to_float($input){
 
 function convert_to_string($input){
 	if(is_array($input)){
-		return implode(",",$input);
+		return implode(", ",$input);
 	} else{
 		return (string)$input;
 	}
 }
-//$array_var =array(1,2,3);
-//var_dump(convert_to_string(66));
+//$a=array(2,3);
+ //var_dump(convert_to_string($a));
 
 function convert_to_bool($input){
 	return (bool)$input;
@@ -35,11 +35,11 @@ function convert_to_array($input){
 //var_dump(convert_to_array(null));
 
 function convert_to_null($input){
-	if(!empty($input)){
-		return $input;
-	} else {
+	if(empty($input) || $input == "null"){
 		return (unset)$input;
+	} else {
+		return $input;
 	}
 }
-//$a = array();
-//var_dump(convert_to_null(true));
+//$a = array(2, 3);
+//var_dump(convert_to_null($a));
