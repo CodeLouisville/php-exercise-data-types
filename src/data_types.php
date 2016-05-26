@@ -45,7 +45,7 @@ function convert_to_bool($bool){
     return false;
   }
 }
-echo convert_to_bool(45);
+echo convert_to_bool(798);
 
 
 //convert_to_array
@@ -54,31 +54,35 @@ function convert_to_array($arr){
     $test = array_values($arr);
     print_r($test);
   }
-    elseif (is_int($arr) || is_string($arr) || is_float($arr) || $arr != null || $arr != false) {
+    elseif (is_int($arr) || is_string($arr) || is_float($arr) || is_bool($arr)) {
     $convert_arr = array($arr);
     print_r(array_values($convert_arr));
-    } else {
-    $empty = [];
-    print_r($empty);
+  } else {
+      if (!$arr == null) {
+      $empty = [];
+      print_r($empty);
+    } else
+      print_r(null);
+      var_dump($empty);
     }
 }
 
-echo convert_to_array(false);
+echo convert_to_array(45);
 
 
 //convert_to_null
 function convert_to_null($null){
   $value= is_null($null);
+  $value2 = is_bool($null);
   // var_dump($value);
-  if ($value) {
-    return null;
-  } /*elseif ($null == 0 || $null == "0" || $null == "null" || is_bool($null) || $null == "" || $null == []) {
-    return "yay";
-  }*/ else {
+  if ($null) {
     return $null;
-    //var_dump($null);
-  }
+  } elseif ($value || $null == 0 || $null == "0" || $null == 0.0 || $null == "null" || is_bool($null)) {
+    return null;
+  } else {
+    return $value2;
+    var_dump($value2);
+    }
  }
 
-/*$poo =*/ convert_to_null("true");
-// var_dump($poo);
+echo convert_to_null(true);
