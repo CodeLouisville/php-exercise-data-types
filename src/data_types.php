@@ -88,13 +88,13 @@ echo convert_to_array(45);
 
 //convert_to_null#2
 function convert_to_null ($null){
-  if ($null) {
-    return $null;
-  } elseif ($null == null || $null == 0 || $null == "0" || $null == 0.0 || $null == "null") {
+  if ($null == null || $null == 0 || $null == "0" || $null == 0.0 || $null == "null") {
     return null;
+  } elseif ($null) {
+    return $null;
   } else {
     return null;
   }
 
 }
-echo convert_to_null(true);
+echo convert_to_null("null");
