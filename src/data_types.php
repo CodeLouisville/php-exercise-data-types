@@ -88,7 +88,7 @@ echo convert_to_array(45);
 
 //convert_to_null#2
 function convert_to_null ($null){
-  if ($null == "null") {
+  if ($null == "null" || is_bool($null)) {
     return null;
   } else {
     if ($null) {
@@ -101,4 +101,4 @@ function convert_to_null ($null){
   }
 
 }
-echo convert_to_null("null");
+echo convert_to_null(true);
