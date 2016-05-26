@@ -7,9 +7,9 @@
 		return intval($int);
 	}
 
-	$num = convert_to_int('666');
+	//$num = convert_to_int('666');
 	//echo convert_to_int('dog');
-	var_dump($num);
+	//var_dump($num);
 
 
 // convert_to_float()
@@ -23,10 +23,10 @@
 		}
 	}
 
-	$float = convert_to_float('foo');
+	//$float = convert_to_float('foo');
 	//$float = convert_to_float('3.14159PIETOWNANDZBOYS');
 	
-	var_dump($float);
+	//var_dump($float);
 	//echo $float;
 
 
@@ -43,10 +43,10 @@
 	}
 
 	//$var = convert_to_string(55);
-	$var = convert_to_string(array('foo', 'bar'));
+	//$var = convert_to_string(array('foo', 'bar'));
 
 	//echo $var;
-	var_dump($var);
+	//var_dump($var);
 
 
 //convert_to_bool
@@ -55,8 +55,8 @@
 		return (bool) $boo;
 	}
 	
-	$bool = convert_to_bool(null);
-	var_dump($bool);
+	//$bool = convert_to_bool(null);
+	//var_dump($bool);
 
 
 //convert_to_array()
@@ -64,20 +64,23 @@
 	function convert_to_array($arrgh) {
 		if (is_array($arrgh)) {
 			return($arrgh);
-		} else if($arrgh = null) {
+		} else if($arrgh != null) {
 			return array();
 		} else {
-			return array($arrgh);
+			return array();
 		} 
 	}
 	
-	$yayarray = convert_to_array(null);
-	var_dump($yayarray);
+	//$yayarray = convert_to_array(null);
+	//var_dump($yayarray);
 
 
 //convert_to_null()
 
-	function convert_to_null() {}
+	function convert_to_null($foo) {
+		unset($foo);
+	}
 
-
+	//$bar = convert_to_null(FALSE);
+	//var_dump($bar);
 
