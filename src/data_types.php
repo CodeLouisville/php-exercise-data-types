@@ -71,18 +71,31 @@ echo convert_to_array(45);
 
 
 //convert_to_null
-function convert_to_null($null){
-  $value= is_null($null);
-  $value2 = is_bool($null);
-  // var_dump($value);
+// function convert_to_null($null){
+//   $value= is_null($null);
+//   // $value2 = is_bool($null);
+//   var_dump($value);
+//   if ($value == false) {
+//     return "begining value";
+//   } elseif ($null == 0 || $null == "0" || $null == 0.0 || $null == "null" || is_bool($null)) {
+//     return "nothing";
+//   } else {
+//     return "fart";
+//     }
+//  }
+//
+// echo convert_to_null("why");
+
+//convert_to_null#2
+function convert_to_null ($null){
   if ($null) {
-    return $null;
-  } elseif ($value || $null == 0 || $null == "0" || $null == 0.0 || $null == "null" || is_bool($null)) {
+    $test = $null;
+    var_dump($test);
+  } elseif ($null == null || $null == 0 || $null == "0" || $null == 0.0 || $null == "null") {
     return null;
   } else {
-    return $value2;
-    var_dump($value2);
-    }
- }
+    return null;
+  }
 
+}
 echo convert_to_null(true);
