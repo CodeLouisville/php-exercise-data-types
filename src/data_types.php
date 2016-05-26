@@ -71,7 +71,7 @@ echo convert_to_array(45);
 
 //convert_to_null#2
 function convert_to_null ($null){
-  if ($null == "null") {
+  if ($null == "null"|| $null == "" || $null == []) {
     return null;
   } else {
     if ($null || $null == null) {
@@ -84,4 +84,5 @@ function convert_to_null ($null){
   }
 
 }
-echo convert_to_null(null);
+$test = convert_to_null('');
+var_dump($test);
