@@ -54,7 +54,7 @@ function convert_to_array($arr){
     $test = array_values($arr);
     print_r($test);
   }
-    elseif (is_int($arr) || is_string($arr)) {
+    elseif (is_int($arr) || is_string($arr) || is_float($arr) || $arr != null || $arr != false) {
     $convert_arr = array($arr);
     print_r(array_values($convert_arr));
     } else {
@@ -63,7 +63,7 @@ function convert_to_array($arr){
     }
 }
 
-echo convert_to_array([1,1,"poop"]);
+echo convert_to_array(false);
 
 
 //convert_to_null
@@ -72,12 +72,13 @@ function convert_to_null($null){
   // var_dump($value);
   if ($value) {
     return null;
-  } elseif ($null == 0 || $null == "0" || $null == "null" || is_bool($null) || $null == "" || $null == []) {
-    return null;
-  } else {
+  } /*elseif ($null == 0 || $null == "0" || $null == "null" || is_bool($null) || $null == "" || $null == []) {
+    return "yay";
+  }*/ else {
     return $null;
-    // var_dump($null);
+    //var_dump($null);
   }
  }
 
-echo convert_to_null(true);
+/*$poo =*/ convert_to_null("true");
+// var_dump($poo);
