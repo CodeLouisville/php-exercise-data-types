@@ -69,23 +69,6 @@ function convert_to_array($arr){
 
 echo convert_to_array(45);
 
-
-//convert_to_null
-// function convert_to_null($null){
-//   $value= is_null($null);
-//   // $value2 = is_bool($null);
-//   var_dump($value);
-//   if ($value == false) {
-//     return "begining value";
-//   } elseif ($null == 0 || $null == "0" || $null == 0.0 || $null == "null" || is_bool($null)) {
-//     return "nothing";
-//   } else {
-//     return "fart";
-//     }
-//  }
-//
-// echo convert_to_null("why");
-
 //convert_to_null#2
 function convert_to_null ($null){
   if ($null == "null" || $null == null) {
