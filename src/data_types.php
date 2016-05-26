@@ -35,11 +35,12 @@ function convert_to_array($input){
 //var_dump(convert_to_array(null));
 
 function convert_to_null($input){
-	if(empty($input) || $input == "null"){
+	if(empty($input) || $input === "null"){
 		return (unset)$input;
 	} else {
 		return $input;
 	}
 }
 //$a = array(2, 3);
-//var_dump(convert_to_null($a));
+//$a = true;
+//var_dump(convert_to_null("null"));
