@@ -20,7 +20,7 @@ function convert_to_string($input) {
     if (settype($input, "string")) {
         return $input;
     } else {
-        return "";
+        return '';
     }
 }
 
@@ -36,15 +36,15 @@ function convert_to_array($input) {
     if (settype($input, "array")) {
         return $input;
     } else {
-        return [];
+        return array();
     }
 }
 
 function convert_to_null($input) {
     if (settype($input, "null")) {
-        return $input;
-    } else {
         return null;
+    } else {
+        return $input;
     }
 }
 
