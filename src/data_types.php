@@ -69,21 +69,13 @@ function convert_to_array($arr){
 
 echo convert_to_array(45);
 
-//convert_to_null#2
-function convert_to_null ($null){
-  if ($null === "null") {
-    return "null";
+//convert_to_null
+function convert_to_null($null){
+  if (!$null || $null === "null") {
+    return null;
   } else {
-    if ($null || $null === null) {
-      return $null;
-    } elseif ($null === 0 || $null === "0" || $null === 0.0|| $null === "" || $null === []) {
-      return null;
-    } else {
-      return null;
-    }
+    return $null;
   }
-
 }
-$test = convert_to_null(0);
+$test = convert_to_null("null");
 var_dump($test);
-
