@@ -77,9 +77,9 @@ function convert_to_null ($null){
     if ($null || $null === null) {
       return $null;
     } elseif ($null === 0 || $null === "0" || $null === 0.0|| $null === "" || $null === []) {
-      return "toots";
+      return null;
     } else {
-      return "farts";
+      return null;
     }
   }
 
