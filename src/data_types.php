@@ -54,6 +54,6 @@ function convert_to_array($input = array(1,2,3,4)) {
     } else {
       $conval = $input;
     }
-    retrun $conval;
+    return $conval;
   }
 ?>
