@@ -71,18 +71,19 @@ echo convert_to_array(45);
 
 //convert_to_null#2
 function convert_to_null ($null){
-  if ($null == "null"|| $null == "" || $null == []) {
-    return null;
+  if ($null === "null") {
+    return "null";
   } else {
-    if ($null || $null == null) {
+    if ($null || $null === null) {
       return $null;
-    } elseif ($null == 0 || $null == "0" || $null == 0.0) {
-      return null;
+    } elseif ($null === 0 || $null === "0" || $null === 0.0|| $null === "" || $null === []) {
+      return "toots";
     } else {
-      return null;
+      return "farts";
     }
   }
 
 }
-$test = convert_to_null('');
+$test = convert_to_null(0);
 var_dump($test);
+
