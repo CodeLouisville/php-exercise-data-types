@@ -15,7 +15,7 @@ function convert_to_float($input = null) {
   } else {
   $conval = "0.0";
 }
-  return($conval);
+  return $conval;
   }
 
 function convert_to_string($input = null) {
@@ -26,7 +26,7 @@ function convert_to_string($input = null) {
 } else {
   $conval = $input;
 }
-return($conval);
+  return $conval;
 }
 
 function convert_to_bool($input = null) {
@@ -35,7 +35,7 @@ function convert_to_bool($input = null) {
   } else {
     $conval = false;
 }
-  return($conval);
+  return $conval;
 }
 
 function convert_to_array($input = array(1,2,3,4)) {
@@ -45,7 +45,7 @@ function convert_to_array($input = array(1,2,3,4)) {
     $conval = null;
   }
 
-  return($conval);
+  return $conval;
 }
 
   function convert_to_null($input = null){
@@ -54,6 +54,6 @@ function convert_to_array($input = array(1,2,3,4)) {
     } else {
       $conval = $input;
     }
-    retrun($conval);
+    retrun $conval;
   }
 ?>
