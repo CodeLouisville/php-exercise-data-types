@@ -1,24 +1,24 @@
 <?php
 
-function convert_to_int($input = null) {
+function convert_to_int($input) {
   if($input > 0) {
     $conval = intval($input);
   } else {
-    $conval = "0";
+    $conval = 0;
 }
   return $conval;
 }
 
-function convert_to_float($input = null) {
+function convert_to_float($input) {
   if($input > 0) {
     $conval = floatval($input);
   } else {
-  $conval = "0.0";
+  $conval = 0.0;
 }
   return $conval;
   }
 
-function convert_to_string($input = null) {
+function convert_to_string($input) {
   if(is_array($input)) {
     $conval = implode(", ", $input);
   } else if($input) {
@@ -29,7 +29,7 @@ function convert_to_string($input = null) {
   return $conval;
 }
 
-function convert_to_bool($input = null) {
+function convert_to_bool($input) {
   if($input) {
     $conval = boolval($input);
   } else {
@@ -38,17 +38,18 @@ function convert_to_bool($input = null) {
   return $conval;
 }
 
-function convert_to_array($input = array(1,2,3,4)) {
+function convert_to_array($input) {
   if(is_array($input)) {
     $conval = $input;
   } else if($conval = null) {
     $conval = null;
+  } else {
+    $conval = 0;
   }
-
   return $conval;
 }
 
-  function convert_to_null($input = null){
+  function convert_to_null($input){
     if(is_null($input)) {
       $conval = null;
     } else {
