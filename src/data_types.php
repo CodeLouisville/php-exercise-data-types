@@ -78,9 +78,12 @@
 //convert_to_null()
 
 	function convert_to_null($foo) {
-		unset($foo);
+		if ((!$foo) || $foo === 'null') {
+			return null;
+		} else {
+			return $foo;
+		}
 	}
 
-	//$bar = convert_to_null(FALSE);
-	//var_dump($bar);
-
+	$bar = convert_to_null("string");
+	var_dump($bar);
