@@ -48,26 +48,55 @@ function convert_to_bool($bool){
 echo convert_to_bool(798);
 
 
+// //convert_to_array
+// function convert_to_array($arr){
+//   if(is_array($arr)) {
+//     $test = array_values($arr);
+//     print_r($test);
+//   }
+//     elseif (is_int($arr) || is_string($arr) || is_float($arr) || is_bool($arr)) {
+//     $convert_arr = array($arr);
+//     print_r(array_values($convert_arr));
+//   } else {
+//       if (!$arr == null) {
+//       $empty = [];
+//       print_r($empty);
+//     } else
+//       print_r(null);
+//       var_dump($empty);
+//     }
+// }
+
+// echo convert_to_array(45);
+
+
 //convert_to_array
 function convert_to_array($arr){
-  if(is_array($arr)) {
-    $test = array_values($arr);
-    print_r($test);
-  }
-    elseif (is_int($arr) || is_string($arr) || is_float($arr) || is_bool($arr)) {
+  if (is_array($arr)) {
+    return $arr;
+  } elseif (is_int($arr) || is_string($arr) || is_float($arr)) {
     $convert_arr = array($arr);
-    print_r(array_values($convert_arr));
+    var_dump($convert_arr);
+    return array_values($convert_arr);
   } else {
-      if (!$arr == null) {
-      $empty = [];
-      print_r($empty);
-    } else
-      print_r(null);
-      var_dump($empty);
-    }
+    $nothing = []; 
+    return $nothing;
+  }
+
 }
 
-echo convert_to_array(45);
+return convert_to_array(null);
+
+
+
+
+
+
+
+
+
+
+
 
 //convert_to_null
 function convert_to_null($null){
