@@ -2,7 +2,6 @@
 
 function convert_to_int($input){
 	return (int)$input;
-	
 }
 //echo convert_to_int("1");
 
