@@ -29,7 +29,7 @@ function convert_to_string($input) {
   return $conval;
 }
 
-function convert_to_bool($input) {
+function convert_to_bool($input = null) {
   if($input) {
     $conval = boolval($input);
   } else {
@@ -57,4 +57,4 @@ function convert_to_array($input) {
     }
     return $conval;
   }
-?>
+  ?>
