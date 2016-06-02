@@ -18,13 +18,13 @@ function convert_to_float($input) {
   return $conval;
   }
 
-function convert_to_string($input) {
+function convert_to_string($input = '') {
   if(is_array($input)) {
     $conval = implode(", ", $input);
   } else if($input) {
     $conval = strval($input);
-} else {
-  $conval = $input;
+  } else {
+  $conval = '';
 }
   return $conval;
 }
@@ -38,15 +38,14 @@ function convert_to_bool($input = null) {
   return $conval;
 }
 
-function convert_to_array($input) {
-  if(is_array($input)) {
-    $conval = $input;
-  } else if($conval = null) {
-    $conval = null;
+function convert_to_array($input = 0) {
+  if(!is_array($input)) {
+    $conval = (array) $input;
   } else {
-    $conval = 0;
+
+    $conval = $input;
   }
-  return $conval;
+    return $conval;
 }
 
   function convert_to_null($input){
