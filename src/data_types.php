@@ -9,7 +9,11 @@ function convert_to_float($input) {
 }
 
 function convert_to_string($input) {
-	return strval($input);
+	if (gettype($input) === 'array') {
+		return implode(", ", $input);
+	} else {
+		return strval($input);
+	}
 }
 
 function convert_to_bool($input) {
