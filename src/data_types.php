@@ -35,7 +35,7 @@ function convert_to_bool($value) {
 }
 
 function convert_to_array($value) {
-    if (is_array($value)) {
+    if (is_array( mixed $value)) {
     return $value;
   } else if (!$value) {
     return [];
