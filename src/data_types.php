@@ -46,13 +46,13 @@ function convert_to_bool($value) {
 //var_dump (convert_to_array(''));
 
 function convert_to_array($value) {
-  if (!$value) {
+  if ($value === null) {
     return [];
 } else {
   return [$value];
 }
 }
-//var_dump (convert_to_array(''));
+//var_dump (convert_to_array([2,3]));
 
 function convert_to_null($value) {
   if (!$value || $value === "null") {
