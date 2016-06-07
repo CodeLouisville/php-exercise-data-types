@@ -37,9 +37,9 @@ function convert_to_bool($value) {
 function convert_to_array($value) {
    else if (is_array($value)) {
     return $value;
-  } if (!$value) {
+  } else if (!$value) {
     return [];
-  }else {
+  } else {
     return [$value];
   }
 }
