@@ -51,6 +51,7 @@ function convert_to_array($value) {
 } else {
   return [$value];
 }
+}
 //var_dump (convert_to_array(''));
 
 function convert_to_null($value) {
