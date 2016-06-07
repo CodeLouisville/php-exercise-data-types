@@ -37,10 +37,10 @@ function convert_to_bool($value) {
 function convert_to_array($value) {
   if (!$value) {
     return [];
-  } else if {
-    return [$value];
-  } else (is_array($value)) {
+  } else if (is_array($value)) {
     return $value;
+  } else {
+    return [$value];
   }
 }
 
