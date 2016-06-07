@@ -45,13 +45,12 @@ function convert_to_bool($value) {
 //}
 //var_dump (convert_to_array(''));
 
-function convert_to_array ($value) {
+function convert_to_array($value) {
   if (!$value) {
     return [];
 } else {
-  return (array)$value;
+  return [$value];
 }
-
 //var_dump (convert_to_array(''));
 
 function convert_to_null($value) {
