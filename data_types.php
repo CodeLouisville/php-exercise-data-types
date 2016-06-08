@@ -32,7 +32,57 @@ var_dump($array);
 //convert_to_null()
 $newA =  is_null($a);
 var_dump($newA);
+?>
+
+<?php
+
+//Convert to Int
+function convert_to_int($input = "0"){		
+   return $input;
+}
+ 
+ echo convert_to_int();
+?>
+
+<?php 
+//Convert to float
+ $num = "7.5"; 
+ $rating = floatval($num);
+
+function convert_to_float($rating){
+    return $rating;
+}
+
+echo convert_to_float($rating);
+?>
+
+<?php
+//Convert to String
+
+$input = 555;
+
+function convert_to_string($input){
+    return "$input";
+}
+echo convert_to_string($input);
+?>
+
+<?php
+//Convert to bool
+$var = 0;
+$input = boolval($var);
+
+function convert_to_bool($input){
+    if(is_bool($input) === true){
+        echo "Booyah! A Boolean!";
+    } else {
+        echo "404 error";
+    }
+}
+echo convert_to_bool($input);
 
 ?>
+
+    
 
 
