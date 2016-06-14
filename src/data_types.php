@@ -21,9 +21,9 @@ function convert_to_float($input) {
 function convert_to_string($input) {
   if(is_array($input)) {
     $conval = implode(", ", $input);
-  } elseif ($input === null || !$input) {
+  } else if ($input === null) {
       $conval = null;
-  } elseif ($input){
+  } else if ($input){
     $conval = strval($input);
   } else {
     $conval = '';
@@ -52,7 +52,7 @@ function convert_to_array($input) {
 }
 
   function convert_to_null($input){
-    if($input === null || !$input) {
+    if($input === null) {
       $conval = null;
     } else {
       $conval = $input;
