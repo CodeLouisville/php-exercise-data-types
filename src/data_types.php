@@ -17,11 +17,12 @@ function convert_to_float($input) {
 }
 
 function convert_to_string($input) {
-    if (settype($input, "string")) {
+    if (is_array($input)) {
+        return implode(", ", $input);
+    } elseif (is_string($input)) {
         return $input;
     } else {
         return "";
-    }
 }
 
 function convert_to_bool($input) {
@@ -36,7 +37,7 @@ function convert_to_array($input) {
     if (settype($input, "array")) {
         return $input;
     } else {
-        return [];
+        return array();
     }
 }
 
