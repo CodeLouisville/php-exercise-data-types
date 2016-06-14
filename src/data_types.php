@@ -18,10 +18,10 @@ function convert_to_float($input) {
   return $conval;
   }
 
-function convert_to_string($input = null) {
+function convert_to_string($input) {
   if(is_array($input)) {
     $conval = implode(", ", $input);
-  } elseif ($input == null || !$input) {
+  } elseif ($input === null || !$input) {
       $conval = null;
   } elseif ($input){
     $conval = strval($input);
@@ -52,7 +52,7 @@ function convert_to_array($input) {
 }
 
   function convert_to_null($input){
-    if(is_null($input)) {
+    if($input === null || !$input) {
       $conval = null;
     } else {
       $conval = $input;
