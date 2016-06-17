@@ -19,7 +19,7 @@ function convert_to_float($input) {
 function convert_to_string($input) {
     if (is_array($input)) {
         return implode(", ", $input);
-    } elseif (!is_string($input)) { //do falsy check
+    } elseif (!settype($input, "string")) { //do falsy check
         return "";
     } else { //return string value
         return $input;
