@@ -6,24 +6,30 @@
 //Return `[]` for `convert_to_array()`
 //Return `null` for `convert_to_null()`
 
-// $input = "Ello World ";
+$input = array("somethign", "two", "Three");
 
 function convert_to_int($input){
  return (int)$input;
 }
+
 
 function convert_to_float($input){
   return (double)$input;
 }
 
 function convert_to_string($input){
-//  array to string code here should return comma seperated values in a string
-  if (bool is_array(mixed $input)){
-    for(var i = 0; i<$input.Length; i++){
-    return $input[i];
+ //array to string code here should return comma seperated values in a string
+  if (is_array ($input)){
+    $length = count($input);
+    $output = "";
+
+    for($i = 0; $i < $length; $i++){
+    $output .= $input[$i] . ", ";
     }
+    return $output;
   }
-  else{return (string)$input;}
+  else{ return (string)$input;}
+  // return (string)$input;
 }
 
 function convert_to_bool($input){
@@ -39,7 +45,5 @@ function convert_to_null($input){
     return null;
   }else{return true;}
 }
-
-echo convert_to_string($input);
 
 ?>
