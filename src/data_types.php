@@ -25,7 +25,11 @@ function convert_to_bool($input)  {
 }
 
 function convert_to_array($input)  {
-    return array($input);
+    if (is_array($input)) {
+        return $input;
+    } else {
+        return array($input);
+    }
 }
 
 function convert_to_null($input)  {
@@ -35,5 +39,9 @@ function convert_to_null($input)  {
         return $input;
     }
 }
+
+$test = [2,3];
+
+var_dump( convert_to_array($test) );
 
 ?>
