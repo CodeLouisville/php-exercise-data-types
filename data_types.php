@@ -6,7 +6,7 @@
 //Return `[]` for `convert_to_array()`
 //Return `null` for `convert_to_null()`
 
-$input = "Ello World ";
+// $input = "Ello World ";
 
 function convert_to_int($input){
  return (int)$input;
