@@ -9,36 +9,35 @@
 $input = "Ello World ";
 
 function convert_to_int($input){
- echo (int)$input;
+ return (int)$input;
 }
 
 function convert_to_float($input){
-  echo (double)$input;
+  return (double)$input;
 }
 
 function convert_to_string($input){
-  //array to string code here should return comma seperated values in a string
-  // if (bool is_array ( mixed $input )){
-  //   for(var i = 0; i<$input.Length; i++){
-  //     echo $input[i];
-  //   }
-  // }
-  // else{echo (string)$input;}
-  echo (string)$input;
+//  array to string code here should return comma seperated values in a string
+  if (bool is_array ( mixed $input )){
+    for(var i = 0; i<$input.Length; i++){
+    return $input[i];
+    }
+  }
+  else{return (string)$input;}
 }
 
 function convert_to_bool($input){
-  echo false;
+  return false;
 }
 
 function convert_to_array($input){
- echo array($input);
+ return array($input);
 }
 
 function convert_to_null($input){
   if( $input == 0 || $input == false){
-    echo null;
-  }else{echo true;}
+    return null;
+  }else{return true;}
 }
 
 echo convert_to_string($input);
