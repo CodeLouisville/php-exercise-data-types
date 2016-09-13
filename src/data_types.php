@@ -37,11 +37,4 @@ function convert_to_null($input)  {
     }
 }
 
-convert_to_int($test);
-convert_to_float($test);
-convert_to_string($test);
-convert_to_bool($test);
-convert_to_array($test);
-convert_to_null($test);
-
 ?>
