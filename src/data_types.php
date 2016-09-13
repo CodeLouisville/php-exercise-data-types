@@ -13,7 +13,6 @@ function convert_to_string($input)  {
     } else {
         $input = strval($input);
     }
-
     return $input;
 }
 
@@ -30,7 +29,7 @@ function convert_to_array($input)  {
 }
 
 function convert_to_null($input)  {
-    if ($input == null) {
+    if ($input === null) {
         return null;
     } else {
         return $input;
