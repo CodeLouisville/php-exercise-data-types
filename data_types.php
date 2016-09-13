@@ -18,7 +18,7 @@ function convert_to_float($input){
 
 function convert_to_string($input){
 //  array to string code here should return comma seperated values in a string
-  if (bool is_array ( mixed $input )){
+  if (bool is_array(mixed $input)){
     for(var i = 0; i<$input.Length; i++){
     return $input[i];
     }
