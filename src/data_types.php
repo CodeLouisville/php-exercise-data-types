@@ -1,6 +1,6 @@
 <?php
 function convert_to_int($input){
-  if (intval($input)==true){
+  if (intval($input)){
       return intval($input);
   } else {
       return 0;}
@@ -8,7 +8,7 @@ function convert_to_int($input){
 }
 
 function convert_to_float($input){
-  if (floatval($input)==true){
+  if (floatval($input)){
     return floatval($input);
   }else {return 0.0;
     }
@@ -19,7 +19,7 @@ function convert_to_string($input){
     return implode (', ' , $input);
   }
     else {
-      if (strval($input)==true){
+      if (strval($input)){
         return strval($input);
       }else {
           return "";
@@ -28,7 +28,7 @@ function convert_to_string($input){
 }
 
 function convert_to_bool($input){
-  if (boolval($input) == true){
+  if (boolval($input)){
     return boolval($input);
   }else {
       return false;
@@ -36,7 +36,7 @@ function convert_to_bool($input){
 }
 
 function convert_to_array($input){
-  if (array($input)==true) {
+  if (array($input)) {
     return array($input);
   }else {
       return [];
@@ -54,12 +54,14 @@ function convert_to_null($input){
     return $input;
   }
 }
+
 /*
 var_dump(convert_to_int(7.6));
 var_dump(convert_to_float(4));
-var_dump(convert_to_string([64,809]));
+var_dump(convert_to_string([502, beans, 743]));
 var_dump(convert_to_bool(12));
-var_dump(convert_to_array([155,9,23]));
+var_dump(convert_to_array(33));
 var_dump(convert_to_null(8787));
 */
+
  ?>
