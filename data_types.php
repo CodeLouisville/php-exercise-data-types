@@ -6,7 +6,7 @@
 //Return `[]` for `convert_to_array()`
 //Return `null` for `convert_to_null()`
 
-$input = array("somethign", "two", "Three");
+$input = array(array(2, 3), array(2, 3));
 
 function convert_to_int($input){
  return (int)$input;
@@ -24,7 +24,9 @@ function convert_to_string($input){
     $output = "";
 
     for($i = 0; $i < $length; $i++){
-    $output .= $input[$i] . ", ";
+      if($i+1 == $length) //checks if end of line removes last comma
+      {$output .= $input[$i];}
+      else{$output .= $input[$i] . ", ";}
     }
     return $output;
   }
@@ -33,11 +35,14 @@ function convert_to_string($input){
 }
 
 function convert_to_bool($input){
-  return false;
+  return (bool)$input;
 }
 
 function convert_to_array($input){
- return array($input);
+  if ($input == null){
+    return array();
+  }
+  else{return array($input);}
 }
 
 function convert_to_null($input){
@@ -45,5 +50,7 @@ function convert_to_null($input){
     return null;
   }else{return true;}
 }
+
+var_dump(convert_to_array($input));
 
 ?>
