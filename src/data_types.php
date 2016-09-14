@@ -35,7 +35,7 @@ function convert_to_array($input)  {
 }
 
 function convert_to_null($input)  {
-    if (!$input) {
+    if (!$input || $input = "null") {
         return null;
     } else {
         return $input;
