@@ -33,15 +33,13 @@ function convert_to_array($input)  {
 }
 
 function convert_to_null($input)  {
-    if ($input === null) {
+    if (!$input) {
         return null;
     } else {
         return $input;
     }
 }
 
-$test = [2,3];
-
-var_dump( convert_to_array($test) );
+var_dump(convert_to_array([1, 1, "poop"]));
 
 ?>
