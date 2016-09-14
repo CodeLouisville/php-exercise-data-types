@@ -25,7 +25,9 @@ function convert_to_bool($input)  {
 }
 
 function convert_to_array($input)  {
-    if (is_array($input)) {
+    if ($input === null) {
+        return array();
+    } else if (is_array($input)) {
         return $input;
     } else {
         return array($input);
@@ -33,13 +35,10 @@ function convert_to_array($input)  {
 }
 
 function convert_to_null($input)  {
-    if (!$input) {
+    if (!$input || $input == null) {
         return null;
     } else {
         return $input;
     }
 }
-
-var_dump(convert_to_array([1, 1, "poop"]));
-
 ?>
