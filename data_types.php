@@ -6,7 +6,7 @@
 //Return `[]` for `convert_to_array()`
 //Return `null` for `convert_to_null()`
 
-$input = array(array(2, 3), array(2, 3));
+$input = array('', array(''));
 
 function convert_to_int($input){
  return (int)$input;
@@ -42,7 +42,11 @@ function convert_to_array($input){
   if ($input == null){
     return array();
   }
-  else{return array($input);}
+  //Test if Array return  -- else place in array
+  elseif (is_array ($input)){
+    return $input;}
+  else{
+    return array($input);}
 }
 
 function convert_to_null($input){
