@@ -2,36 +2,47 @@
 <?php
 //convert_to_int()
 function convert_to_int($input){
-  return intval($input);
+  if (settype($input, "int")) {
+    return $input;
+  } else {
+    return 0;
+  }
 }
+
 //convert_to_float()
 function convert_to_float($input){
-  return floatval($input);
+  if (settype($input, "float")) {
+    return $input;
+  } else {
+    return 0.0;
+  }
 }
+
 //convert_to_string()
 function convert_to_string($input){
-if (is_array($input)) { $input = implode(",", $input);
+  if (is_array($input)) {
+     return implode(", ", $input);;
+  } elseif (!settype($input, "string")){
+    return "";
   } else {
-    $input = strval($input);
+    return $input;
   }
-  return $input;
 }
 //convert_to_bool()
 function convert_to_bool($input){
-  if ($input) {
-    return true;
+  if (settype($input, "bool")){
+    return $input;
   } else {
     return false;
   }
 }
+
 //convert_to_array()
 function convert_to_array($input){
-  if ($input === null) {
-    return array();
-  } else if (is_array($input)) {
+  if (settype($input, "array")) {
     return $input;
   } else {
-    return array($input);
+    return array();
   }
 }
 //convert_to_null()
