@@ -10,15 +10,10 @@ function convert_to_float($dataIn){
 }
 
 function convert_to_string($dataIn) {	
-	if(is_array($dataIn)){
-		$dataOut='';
-		foreach ($dataIn as $value){
-			$dataOut = $dataOut.$value.', ';			
-		}
-		if(count($dataIn) == 1){
-			$dataOut = $dataIn[0];
-			settype($dataOut,"string");}
-	}else{	
+	if(is_array($dataIn)){//if $dataIn is an array
+		$data = array_map("convert_to_string", $dataIn);//recursion, the function calling itself 
+		$dataOut = implode(', ', $data); //convert array to string	
+	}else{	//if $dataIn is not an array
 		$dataOut = $dataIn;
 		settype($dataOut, "string");
 	}
@@ -35,17 +30,18 @@ function convert_to_array($dataIn){
 	return $dataIn;		
 }
 
-function convert_to_null($dataIn){
-	if (!$dataIn){
-		settype($dataIn, "null");
-	}
-	return $dataIn;	
-}
 
+function convert_to_null($dataIn){
+	if(!$dataIn || $dataIn === 'null'){
+		return null;
+	} else {
+		return $dataIn;
+	}
+}
 
 /*
 //input data
-$input = [1,23,45];
+$input = ['null', null];
 echo "The input data is: ";
 var_dump($input);
 
@@ -57,7 +53,7 @@ echo "</br> After the input is converted, the output data is: ";
 //$output = convert_to_float($input);//convert to float
 //$output = convert_to_string($input);//convert to string
 //$output = convert_to_bool($input);//convert to boolean
-//$output = convert_to_array($input);//convert to boolean
+//$output = convert_to_array($input);//convert to array
 $output = convert_to_null($input);//convert to null
 var_dump($output);
 
